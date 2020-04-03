@@ -145,14 +145,56 @@ body {
     font-style: italic; }
 
 .homes {
-  background-color: #101d2c;
-  grid-column: 2 / 10;
-  grid-row: 5/6; }
+  grid-column: center-start / center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 7rem; }
+
+.home {
+  background-color: #f9f7f6;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 1rem; }
+  .home__img {
+    width: 100%;
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    z-index: 1; }
+  .home__name {
+    grid-row: 1 / 2;
+    grid-column: 1 / -1;
+    justify-self: center;
+    align-self: end;
+    z-index: 3;
+    width: 80%;
+    font-family: "Josefin Sans", sans-serif;
+    font-size: 1.6rem;
+    text-align: center;
+    padding: 1.25rem;
+    background-color: #101d2c;
+    color: #fff;
+    font-weight: 400;
+    transform: translateY(50%); }
+  .home__features {
+    margin-left: 2rem;
+    margin-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.3rem; }
+  .home__price {
+    margin-top: 2.75rem;
+    font-weight: bold; }
+  .home__location, .home__price {
+    font-size: 1.5rem;
+    margin-left: 2rem; }
+  .home__btn {
+    grid-column: 1 / -1; }
 
 .gallery {
   background-color: #54483a;
   grid-column: 1 / -1;
-  grid-row: 4/ 5; }
+  grid-row: 5/ 6; }
 
 .footer {
   background-color: #101d2c;
