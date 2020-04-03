@@ -1,0 +1,54 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+
+// FONT VARIABLES
+$font-primary: "Nunito", sans-serif;
+$font-display: "Josefin Sans", sans-serif;
+
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  /* automatically inherit box-sizing from the body element */
+  box-sizing: inherit;
+}
+
+/* setting the root font-size  */
+html {
+  box-sizing: border-box;
+  /* change to 1px so that we know that 1rem will equal 10px */
+  /* change the 10px to a percentage which will translate to the percentage given by the browser */
+  /* 10/16*100 */
+  /* this method is used when a user decides to adjust the font size on the browser  */
+  font-size: 62.5%;
+}
+
+body {
+  font-family: $font-primary;
+  color: $color-grey-dark-2;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  //   grid-template-rows: 80vh auto 40vw repeat(3, auto);
+  //   //1140px/8cols = 142.5
+  //   // we want to have 8 columns and we want the width to be between what is set as auto and 140px
+  //   // the 1fr on either side will allow the 8 column grid to be centred in the middle of the page
+
+  //   grid-template-columns: 1fr repeat(8, minmax(auto, 14rem))  1fr ;
+  grid-template-rows: 80vh auto 40vw repeat(4, auto); //repeat(7, 1fr);
+  // the minmax(6rem, 1fr) ensure that theres always a margin between the content adn the page
+  grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(auto, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
