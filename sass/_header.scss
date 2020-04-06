@@ -1,6 +1,73 @@
 .header {
   background-color: $color-primary-dark;
   height: 80vh;
-  grid-column: 1/ -1;
-  grid-row: 1 / 1;
+  grid-column: full-start / full-end 6;
+  background-image: linear-gradient(rgba($color-secondary, 0.93), rgba($color-secondary, 0.93)), url(../img/hero.jpeg);
+  background-position: center;
+  background-size: cover;
+  position: relative;
+
+  &__content {
+    position: absolute;
+    top: 40%;
+    left: 40%;
+    transform: translate(-50%, -50%);
+    & > *:not(:first-child) {
+      margin-top: 2rem;
+    }
+  }
+  
+  &__seenon {
+    position: absolute;
+    top: 85%;
+    left: 40%;
+
+    &--text {
+      text-align: center;
+    }
+
+    &--logos {
+  
+      img {
+        height: 2.5rem;
+      }
+    }
+  }
+}
+
+.user-nav {
+  // background-color: rgba($color-primary, 1);
+  display: flex;
+  align-items: center;
+  // fills the remaining height
+  justify-content: space-around;
+  align-self: center;
+
+  &__logo {
+    width: 7%;
+    height: 14%;
+    margin-left: 1rem;
+  }
+  // selecting all the child items in user-nav
+  & > * {
+    padding: 0 2rem;
+    cursor: pointer;
+    height: 100%;
+  }
+
+  &__menu {
+    font-size: 1.4rem;
+    list-style-type: none;
+    display: flex;
+    margin-right: 3rem;
+    color: #fff;
+
+    li a {
+      text-decoration: none;
+      display: block;
+      color: inherit;
+      text-align: center;
+      padding: 1rem;
+    }
+  }
 }
