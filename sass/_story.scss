@@ -9,6 +9,8 @@
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
     background-image: linear-gradient(rgba($color-primary, 0.5), rgba($color-primary, 0.5)), url(../img/back.jpg);
+    background-position: center;
+    background-size: cover;
   }
   &__img--1 {
     width: 100%;

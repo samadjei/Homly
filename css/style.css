@@ -17,7 +17,7 @@ html {
 
 body {
   font-family: "Nunito", sans-serif;
-  color: #6d5d4b;
+  color: #636363;
   font-weight: 300;
   line-height: 1.6; }
 
@@ -42,11 +42,11 @@ body {
   .heading-2--light {
     color: #f9f7f6; }
   .heading-2--dark {
-    color: #54483a; }
+    color: #3b3b3b; }
 
 .heading-3 {
   font-size: 1.6rem;
-  color: #c69963;
+  color: #265077;
   text-transform: uppercase; }
 
 .heading-4 {
@@ -54,10 +54,10 @@ body {
   .heading-4--light {
     color: #f9f7f6; }
   .heading-4--dark {
-    color: #54483a; }
+    color: #3b3b3b; }
 
 .btn {
-  background-color: #c69963;
+  background-color: #265077;
   color: #fff;
   border: none;
   border-radius: 0;
@@ -68,7 +68,7 @@ body {
   cursor: pointer;
   transition: all 0.2s; }
   .btn:hover {
-    background-color: #b28451; }
+    background-color: #18324a; }
 
 .mb-sm {
   margin-bottom: 2rem; }
@@ -83,31 +83,50 @@ body {
   margin-bottom: 8rem; }
 
 .navigation {
-  background-color: #c69963; }
+  background-color: #265077; }
 
 .header {
-  background-color: #b28451;
+  background-color: #18324a;
   height: 80vh;
   grid-column: full-start / full-end 6;
-  background-image: linear-gradient(rgba(16, 29, 44, 0.93), rgba(16, 29, 44, 0.93)), url(../img/hero.jpeg);
+  background-image: linear-gradient(rgba(179, 89, 10, 0.93), rgba(179, 89, 10, 0.93)), url(../img/hero.jpg);
   background-position: center;
   background-size: cover;
   position: relative; }
   .header__content {
     position: absolute;
-    top: 40%;
+    top: 45%;
     left: 40%;
     transform: translate(-50%, -50%); }
     .header__content > *:not(:first-child) {
-      margin-top: 2rem; }
+      margin-top: 2.5rem; }
+    .header__content .heading-3 {
+      color: #265077;
+      font-size: 1.8rem; }
   .header__seenon {
     position: absolute;
     top: 85%;
-    left: 40%; }
+    left: 30%; }
     .header__seenon--text {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      grid-column-gap: 1.5rem;
+      align-items: center;
+      font-size: 1.6rem;
+      color: #f9f7f6;
       text-align: center; }
-    .header__seenon--logos img {
-      height: 2.5rem; }
+      .header__seenon--text::before, .header__seenon--text::after {
+        content: "";
+        height: 1px;
+        display: block;
+        background-color: currentColor; }
+    .header__seenon--logos {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      grid-gap: 3rem;
+      justify-items: center; }
+      .header__seenon--logos img {
+        height: 2.5rem; }
 
 .user-nav {
   display: flex;
@@ -123,7 +142,7 @@ body {
     cursor: pointer;
     height: 100%; }
   .user-nav__menu {
-    font-size: 1.4rem;
+    font-size: 1.6rem;
     list-style-type: none;
     display: flex;
     margin-right: 3rem;
@@ -136,9 +155,8 @@ body {
       padding: 1rem; }
 
 .realtors {
-  background-color: #b28451;
-  grid-row: 6/7;
-  grid-column: 2 / 10; }
+  background-color: #265077;
+  grid-column: center-start / center-end; }
 
 .features {
   grid-column: center-start / center-end;
@@ -153,7 +171,7 @@ body {
   grid-template-columns: auto 1fr;
   gap: 1.5rem 2.5rem; }
   .feature__icon {
-    fill: #c69963;
+    fill: #265077;
     width: 4.5rem;
     height: 4.5rem;
     grid-row: 1 / span 2; }
@@ -163,13 +181,15 @@ body {
 .story {
   grid-row: 3/4; }
   .story__pictures {
-    background-color: #c69963;
+    background-color: #265077;
     grid-column: full-start / col-end 4;
     display: grid;
     grid-template-rows: repeat(6, 1fr);
     grid-template-columns: repeat(6, 1fr);
     align-items: center;
-    background-image: linear-gradient(rgba(198, 153, 99, 0.5), rgba(198, 153, 99, 0.5)), url(../img/back.jpg); }
+    background-image: linear-gradient(rgba(38, 80, 119, 0.5), rgba(38, 80, 119, 0.5)), url(../img/back.jpg);
+    background-position: center;
+    background-size: cover; }
   .story__img--1 {
     width: 100%;
     grid-row: 2 / 6;
@@ -221,7 +241,7 @@ body {
     font-size: 1.6rem;
     text-align: center;
     padding: 1.25rem;
-    background-color: #101d2c;
+    background-color: #b3590a;
     color: #fff;
     font-weight: 400;
     transform: translateY(50%); }
@@ -297,7 +317,7 @@ body {
     display: block; }
 
 .footer {
-  background-color: #101d2c;
+  background-color: #b3590a;
   grid-column: full-start / full-end;
   padding: 8rem; }
 
