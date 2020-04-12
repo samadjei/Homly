@@ -1,5 +1,21 @@
 .testimonials {
   background-color: $color-primary-dark;
   grid-column: center-start / center-end;
+  grid-row: 50vw;
+}
 
+.testimonial {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 2rem;
+  &__profile {
+    display: grid;
+    justify-items: center;
+    grid-gap: 20px;
+  }
+  &__img {
+    width: 50%;
+    border-radius: 50%;
+    display: block;
+  }
 }

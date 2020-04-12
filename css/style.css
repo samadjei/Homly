@@ -156,7 +156,21 @@ body {
 
 .testimonials {
   background-color: #18324a;
-  grid-column: center-start / center-end; }
+  grid-column: center-start / center-end;
+  grid-row: 50vw; }
+
+.testimonial {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 2rem; }
+  .testimonial__profile {
+    display: grid;
+    justify-items: center;
+    grid-gap: 20px; }
+  .testimonial__img {
+    width: 50%;
+    border-radius: 50%;
+    display: block; }
 
 .features {
   grid-column: center-start / center-end;
@@ -343,6 +357,6 @@ body {
 
 .copyright {
   font-size: 1.4rem;
-  color: #aaa;
+  color: #fff;
   margin-top: 6rem;
   text-align: center; }
