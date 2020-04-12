@@ -2,14 +2,25 @@
   grid-column: center-start / center-end;
   margin: 15rem 0;
 
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
-  grid-gap: 6rem;
-  // puts the content to the top
-  align-items: start;
+  @supports (display: grid) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    grid-gap: 6rem;
+    // puts the content to the top
+    align-items: start;
+  }
 }
 
 .feature {
+  float: left;
+  width: 33.33%;
+  margin-bottom: 6rem;
+
+  @supports (display: grid) {
+    width: auto;
+    margin-bottom: 0;
+  }
+
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 1.5rem 2.5rem;
